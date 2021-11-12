@@ -1,234 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/firstQuarter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:elevation="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.myapplication.VazirTextView
+                style="@style/SpaceTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اموزش blockchain" />
+
+
+            <VideoView
+                android:id="@+id/vv"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:id="@+id/web"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/space_cadet"
         >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/firstQuarter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:elevation="50dp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
 
         <TextView
             android:id="@+id/firstQuarterText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="First quarter"
-            android:textColor="#343485"
+            android:text="MohammadReza Shokrani"
+            android:textColor="@color/white"
             android:textStyle="bold"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firstQuarterText"
-            android:background="@color/blue_button"
-            android:layout_marginTop="2dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/january"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            app:cardElevation="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firstQuarterText"
-            app:cardCornerRadius="10dp">
+    </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/blue_button"
-                android:clickable="true"
-                android:text="JAN"></Button>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/january"></ImageView>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/february"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            app:cardElevation="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/january"
-            app:cardCornerRadius="10dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/blue_button"
-                android:clickable="true"
-                android:text="FEB"></Button>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/february"></ImageView>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/march"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            app:cardElevation="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/february"
-            app:cardCornerRadius="10dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/blue_button"
-                android:clickable="true"
-                android:text="MAR"></Button>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/march"></ImageView>
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/secondQuarter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="2dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/firstQuarter"
-        android:elevation="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-
-        <TextView
-            android:id="@+id/secondQuarterText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Second quarter"
-            android:textColor="#343485"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:textStyle="bold"
-            />
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/secondQuarterText"
-            android:background="@color/blue_button"
-            android:layout_marginTop="2dp"/>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/april"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/secondQuarterText"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="APR"
-                android:background="@color/blue_button"
-                android:clickable="true"></Button>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/april"
-                android:scaleType="fitXY"></ImageView>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/may"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/april"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="MAY"
-                android:background="@color/blue_button"
-                android:clickable="true"></Button>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/may"
-                android:scaleType="fitXY"></ImageView>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/june"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/may"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="JUN"
-                android:background="@color/blue_button"
-                android:clickable="true"></Button>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/jun"
-                android:scaleType="fitXY"></ImageView>
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

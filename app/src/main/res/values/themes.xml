@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="GoldTextStyle">
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="SpaceTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@color/space_cadet</item>
+    </style>
 </resources>
