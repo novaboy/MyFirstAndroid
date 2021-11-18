@@ -25,4 +25,18 @@
         <item name="android:textSize">30sp</item>
         <item name="android:background">@color/space_cadet</item>
     </style>
+
+    <style name="RecyclerViewStyle">
+        <item name="android:textColor">@color/light_blue_recycler_view_text</item>
+        <item name="android:background">@color/blue_recycler_view_bk</item>
+    </style>
+
+    <style name="Theme.MyApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

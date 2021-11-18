@@ -12,4 +12,6 @@
     <color name="green">#00FF00</color>
     <color name="gold">#FFD700</color>
     <color name="space_cadet">#2D3047</color>
+    <color name="blue_recycler_view_bk">#114084</color>
+    <color name="light_blue_recycler_view_text">#F1F1F1</color>
 </resources>
