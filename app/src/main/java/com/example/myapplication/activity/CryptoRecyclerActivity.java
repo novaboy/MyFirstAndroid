@@ -7,17 +7,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.controller.adapter.CryptoAdapter;
 import com.example.myapplication.model.entity.Cryptocurrency;
 import com.example.myapplication.service.PriceNotificationService;
+import com.example.myapplication.service.broadcastReceiver.BreakingNewsBroadcastReceiver;
 
 import java.util.ArrayList;
 
@@ -58,6 +62,23 @@ public class CryptoRecyclerActivity extends AppCompatActivity {
         CryptoAdapter adapter = new CryptoAdapter(cryptocurrencyList);
         recycler.setAdapter(adapter);
 
+
+        BreakingNewsBroadcastReceiver receiver = new BreakingNewsBroadcastReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("ir.novasys.android.crypto.news");
+        registerReceiver(receiver, intentFilter);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent();
+                intent.setAction("ir.novasys.android.crypto.news");
+                intent.putExtra("content","news");
+                intent.putExtra("priority","high");
+                intent.putExtra("msg","Bitcoin Dropped by 18%, Someone Still Made More Than 1000% ROI");
+                sendBroadcast(intent);
+            }
+        }, 10000);
 
 
 

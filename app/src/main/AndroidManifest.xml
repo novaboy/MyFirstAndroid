@@ -29,8 +29,18 @@
         </activity>
 
         <service android:name=".service.PriceNotificationService" />
+
+        <receiver android:name=".service.broadcastReceiver.BreakingNewsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="ir.novasys.android.crypto.news" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+
+
 
 </manifest>
