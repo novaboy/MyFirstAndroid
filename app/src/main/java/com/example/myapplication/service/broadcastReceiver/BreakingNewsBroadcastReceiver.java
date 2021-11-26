@@ -10,6 +10,16 @@ public class BreakingNewsBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         String msg = intent.getStringExtra("msg");
-        Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
+        int displayDuration = 0;
+        switch(intent.getStringExtra("priority")){
+            case "high":
+                displayDuration = 1;
+                break;
+            case "low":
+                displayDuration = 0;
+            default:
+                break;
+        }
+        Toast.makeText(context, msg, displayDuration).show();
     }
 }

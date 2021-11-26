@@ -2,6 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="session_3">Session #3</string>
     <string name="exercise_3">Exercise#3 - Recycler + Service + Broadcast</string>
+    <string name="exercise_4">Exercise#4 - Retrofit2 + Recycler</string>
     <string name="title_activity_crypto">CryptoActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

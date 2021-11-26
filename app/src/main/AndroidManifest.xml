@@ -2,19 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
-
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/exercise_3"
+        android:label="@string/exercise_4"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.CryptoRecyclerActivity"
+            android:name=".activity.RetrofitJsonRecyclerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.CryptoRecyclerActivity"
             android:exported="false">
         </activity>
-
-        <service android:name=".service.PriceNotificationService" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"></activity>
 
         <receiver android:name=".service.broadcastReceiver.BreakingNewsBroadcastReceiver">
             <intent-filter>
@@ -36,11 +33,10 @@
             </intent-filter>
         </receiver>
 
+        <service android:name=".service.PriceNotificationService" />
     </application>
-
     <uses-permission android:name="android.permission.INTERNET" />
 
-
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
 </manifest>
