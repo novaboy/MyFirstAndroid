@@ -1,0 +1,64 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    android:background="#d9d9d6"
+    android:layout_marginLeft="10dp">
+
+
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="1dp"
+        android:background="#d9d9d6"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="150dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:background="#d9d9d6">
+
+        <TextView
+            android:id="@+id/vehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d9d9d6"
+            android:textColor="#002744"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/vehicleLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#d9d9d6"
+            android:textColor="#002744"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/vehicleLng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#d9d9d6"
+            android:textColor="#002744"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/vehicleBearing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#d9d9d6"
+            android:textColor="#002744"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
